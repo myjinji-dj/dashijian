@@ -7,6 +7,54 @@ html,body {
 }
 
 body {
-    background: url("images/login_bg.jpg") no-repeat;
+    background: url("/assets/images/login_bg.jpg") no-repeat;
     background-size: cover;
 }
+/* 大事件logo */
+.logo {
+    padding-top: 15px;
+}
+
+/* 登录页面 */
+.login ,
+.reg{
+    background-color: #fff;
+    width: 400px;
+    height: 310px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+/* 登录 title图片 */
+.login-title,
+.reg-title {
+    padding: 17px 0;
+    text-align: center;
+}
+.layui-form-item {
+    padding: 0 30px;
+}
+ .quzhuce,
+ .qudenglu {
+    display: flex;
+    justify-content: flex-end;
+}
+.layui-form-item {
+    position: relative;
+}
+.layui-form-item  .layui-icon {
+    position: absolute;
+    left: 40px;
+    top:10px;
+}
+.layui-form-item  .layui-input{
+    padding-left: 35px;
+}
+
+/* 注册 */
+.reg {
+    display: none;
+}
+
+
