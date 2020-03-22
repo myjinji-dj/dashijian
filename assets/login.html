@@ -61,24 +61,24 @@
             <img src="/assets/images/login_title.png" alt="">
         </div>
         <!-- 注册表单 -->
-        <form class="layui-form">
+        <form class="layui-form  resForm">
             <!-- 第一行 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-user"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
-                    class="layui-input">
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input">
             </div>
             <!-- 第二行 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
-                    class="layui-input">
+                <input type="password" name="password" required lay-verify="required|mima" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input" id="pwd">
             </div>
             <!-- 第三行  确认密码-->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="再次确认密码" autocomplete="off"
-                    class="layui-input">
+                <input type="password" name="title" required lay-verify="required|repwd" placeholder="再次确认密码"
+                    autocomplete="off" class="layui-input">
             </div>
             <!-- 第四行  -->
             <div class="layui-form-item">
