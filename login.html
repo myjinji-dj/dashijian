@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入layui css文件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入自己的css文件 -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+
+</head>
+
+<body>
+    <!-- 头部logo -->
+    <div class="layui-main logo">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+
+    <!-- 登录页面login   start -->
+    <div class="login">
+        <div class="login-title">
+            <img src="/assets/images/login_title.png" alt="">
+        </div>
+        <!-- 登录表单 -->
+        <form class="layui-form  login-form">
+            <!-- 第一行 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-user"></i>
+                <input type="text" name="username" required lay-verify=" required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <!-- 第二行 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <!-- 第三行 -->
+            <div class="layui-form-item">
+                <button class="layui-btn layui-bg-blue layui-btn-fluid" lay-submit lay-filter="formDemo">登录</button>
+            </div>
+            <!-- 第四行 -->
+            <div class="layui-form-item quzhuce">
+                <a href="javascript:;" id="zhuce">去注册账号</a>
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+    <!-- 登录页面 end -->
+
+
+    <!-- 注册页面reg   start -->
+    <div class="reg">
+        <div class="reg-title">
+            <img src="/assets/images/login_title.png" alt="">
+        </div>
+        <!-- 注册表单 -->
+        <form class="layui-form  resForm">
+            <!-- 第一行 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-user"></i>
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <!-- 第二行 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" required lay-verify="required|mima" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input" id="pwd">
+            </div>
+            <!-- 第三行  确认密码-->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="title" required lay-verify="required|repwd" placeholder="再次确认密码"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <!-- 第四行  -->
+            <div class="layui-form-item">
+                <button class="layui-btn layui-bg-blue layui-btn-fluid" lay-submit lay-filter="formDemo">注册</button>
+            </div>
+            <!-- 第五行    去登录-->
+            <div class="layui-form-item qudenglu">
+                <a href="javascript:;" id="denglu">去登录</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- 注册页面 end -->
+
+
+    <!-- 引入js  自己写的放在最后面-->
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/basaAPI.js"></script>
+
+
+</body>
+
+</html>

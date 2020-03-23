@@ -89,7 +89,7 @@ $(function () {
                 // 本地存储token
                 localStorage.setItem('token', res.token);
                 layer.msg('登录成功');
-                // location.href = '/index.html';
+                location.href = '/index.html';
 
             }
         })
