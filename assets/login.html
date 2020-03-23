@@ -24,18 +24,18 @@
             <img src="/assets/images/login_title.png" alt="">
         </div>
         <!-- 登录表单 -->
-        <form class="layui-form">
+        <form class="layui-form  login-form">
             <!-- 第一行 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-user"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
-                    class="layui-input">
+                <input type="text" name="username" required lay-verify=" required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input">
             </div>
             <!-- 第二行 -->
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
-                    class="layui-input">
+                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
             </div>
             <!-- 第三行 -->
             <div class="layui-form-item">
@@ -98,6 +98,7 @@
     <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/basaAPI.js"></script>
 
 </body>
 
