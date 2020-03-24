@@ -41,6 +41,16 @@ function getuserInfo() {
             render(res.data)
 
         },
+        // 设置用户没有登录不允许访问后台页面
+        complete: function (xhr) {
+            console.log(xhr);
+            if (xhr.responseJSON.status === 1 && xhr.responseJSON.message === "身份认证失败！") {
+                // 如果身份认证失败,表示没有登录
+                // 立即跳转到登录页面
+                location.href = '/login.html';
+            }
+        },
+
         // headers配置请求头
         headers: {
             // 利用请求头 Authorization取出本地存储的token
