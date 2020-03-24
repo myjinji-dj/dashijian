@@ -22,10 +22,18 @@ iframe {
     top: 2px;
 }
 /* 欢迎 */
-.welcome {
+.welcome{
     height: 60px;
     line-height: 60px;
     text-align: center;
+   
+}
+.welcome .wc {
+    color: #fff;
+}
+.layui-nav-img {
+    width: 40px;
+    height: 40px;
 }
 
 /* 字体图标 */
