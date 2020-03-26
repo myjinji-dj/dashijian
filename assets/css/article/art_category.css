@@ -1,0 +1,16 @@
+html,body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #f2f3f5;
+}
+.layui-card{
+    margin: 20px 20px 0 20px;
+}
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;  /* 两端对齐*/
+    align-items: center;  /*水平居中*/
+}
+

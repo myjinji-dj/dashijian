@@ -39,7 +39,7 @@ $(function () {
                     return layer.msg(res.message);
                 }
                 layer.msg('修改成功');
-                $('.layui-form')[0].reset();
+                $('.layui-form')[0].reset(); s
 
             }
         })

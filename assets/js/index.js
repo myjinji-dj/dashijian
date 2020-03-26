@@ -31,7 +31,7 @@ function getuserInfo() {
     $.ajax({
         url: '/my/userinfo',
         success: function (res) {
-            console.log(res);
+            // console.log(res);
             // 判断是否获取成功  
             if (res.status !== 0) {
                 return layer.msg(res.message);
@@ -67,7 +67,7 @@ function render(data) {
     // 把获取到的信息渲染到 页面 
     // 1.渲染用户名称 把html中name的值改为与参数一致
     var name = data.nickname || data.username;
-    console.log(name);
+    // console.log(name);
 
     // 获取第一个首字母 转为大写
     var firstText = name.substr(0, 1).toUpperCase();
