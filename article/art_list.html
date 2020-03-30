@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/js/token.js"></script>
+    <!-- 引入css -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/article/atr_list.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <!-- 表单 筛选区 -->
+            <form class="layui-form">
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <!-- 第一个下拉框 -->
+                        <div id="category" class="layui-input-inline" style="width:200px;">
+                            <!-- 放分类 -->
+
+                        </div>
+                        <!-- 状态下拉框 -->
+                        <div class="layui-input-inline" style="width:200px;">
+                            <select name="state" id="">
+                                <option value="">全部状态</option>
+                                <option value="已发布">已发布</option>
+                                <option value="草稿">草稿</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn">筛选</button>
+                    </div>
+
+                </div>
+
+
+
+            </form>
+
+            <!-- 表格区 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="60%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>文章标题</th>
+                        <th>分类</th>
+                        <th>发表时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 放数据 -->
+                    <!-- <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                        <td>人生就像是一场修行</td>
+                        <td>
+                            <button type="button" class="layui-btn  layui-btn-xs">编辑</button>
+                            <button type="button" class="layui-btn  layui-btn-xs layui-btn-danger">删除</button>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+
+            <!-- 分页区 -->
+            <div id="page"></div>
+        </div>
+    </div>
+
+    <!-- 文章列表数据模板 -->
+    <script type="text/html" id="art_dataList">
+    {{each data val}}
+        <tr>
+            <td>{{val.title}}</td>
+            <td>{{val.cate_name}}</td>
+            <td>{{val.pub_date|processTime}}</td>
+            <td>{{val.state}}</td>
+            <td>
+                <button data-id="{{val.Id}}" type="button" class="layui-btn  layui-btn-xs  editor">编辑</button>
+                <button data-id="{{val.Id}}" type="button" class="layui-btn  layui-btn-xs layui-btn-danger del-art">删除</button>
+            </td>
+        </tr>
+    {{/each}}
+    </script>
+
+
+    <!-- 分类模板 -->
+    <script type="text/html" id="tpl-cateory">
+
+    <select name="cate_id" lay-verify="required">
+        <option value="">所有分类</option>
+        {{each data val}}
+        <option value="{{val.Id}}">{{val.name}}</option>
+        {{/each }}
+    </select>
+</script>
+
+
+
+
+
+
+
+    <!-- 引入js -->
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/template-web.js"></script>
+    <script src="/assets/js/basaAPI.js"></script>
+    <script src="/assets/js/article/atr_list.js"></script>
+</body>
+
+</html>
